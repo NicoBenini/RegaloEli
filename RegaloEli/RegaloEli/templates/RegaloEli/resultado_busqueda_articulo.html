@@ -1,0 +1,27 @@
+{% extends "blogApp/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<body style="background-color: lightgreen;">
+
+    {% if articulo_encontrado %}
+
+    <ul>
+    {% for info_articulo_encontrado in articulo_encontrado %}
+        <h3>Articulo encontrado</h3>
+        <li>Titulo: {{info_articulo_encontrado.titulo}}</li>
+        <li>Texto: {{info_articulo_encontrado.texto}}</li>
+        <li>Fecha Publicación: {{info_articulo_encontrado.fecha}}</li>
+    {% endfor %}
+    </ul>
+
+    {% else %}
+
+    <h2>Articulo "{{ titulo }}" no encontrado</h2>
+
+    {% endif %}
+</body>
+
+{% endblock %}

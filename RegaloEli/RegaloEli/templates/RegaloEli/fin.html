@@ -1,0 +1,48 @@
+{% extends "RegaloEli/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div class="container p-3">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2"></div>
+        <div class="col-md-auto">
+
+            {% if request.user.is_authenticated %}
+                <h2> Felicitaciones amor, ya elegiste tu proximo teléfono!!!!!</h2>
+            
+            {% endif %}
+
+        </div>
+        <div class="col col-lg-2"></div>
+    </div>
+</div>
+
+<div class="container p-3">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2"></div>
+        <div class="col-md-auto">
+
+            <h2> Felicitaciones amor, ya elegiste tu próximo IPHONE!!!!!</h2>
+            <h2> La fecha de llegada va a ser el .....</h2>
+            <h1> Te amo mucho!!</h1>
+
+        </div>
+        <div class="col col-lg-2"></div>
+    </div>
+</div>
+
+<div class="container p-3">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2"></div>
+        <div class="col-md-auto">
+            
+            <p></p>
+        
+        </div>
+        <div class="col col-lg-2"></div>
+    </div>
+</div>
+
+{% endblock %}

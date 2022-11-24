@@ -1,0 +1,37 @@
+{% extends "RegaloEli/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo de Navidad 2022</title>
+</head>
+<body style="background-color: pink;">
+    <h1>Regalo de Navidad 2022</h1>
+    <form action="/intermedio2/" method="POST">{% csrf_token %}
+            <p>Memoria: 
+                <br />
+                <input name="memoria" type="radio" />128 GB
+                <br />
+                <input name="memoria" type="radio" />256 GB
+                <br />
+                <input name="memoria" type="radio" />512 GB 
+                <br />
+                Otro:
+                <input name="memoria" type="text" />
+            </p> 
+        
+        <input type="submit" value="Cargar memoria">
+    </form>
+</body>
+</html>
+
+{% endblock %}
+
+
+
